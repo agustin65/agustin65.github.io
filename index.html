@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Calculadora</title>
+</head>
+<body class="bg-dark">
+    <div class="bg-light p-3 m-3" style="width: 500px;">
+        <form id="haberes" class="input-group mb-2">
+            <div class="input-group-prepend w-25">
+                <span class="input-group-text w-100">Haberes</span>
+            </div>
+            <input type="number" autocomplete="off" name="input" class="form-control">
+            <div class="input-group-append">
+                <button class="btn btn-secondary">Agregar</button>
+            </div>
+        </form>
+        <div class="input-group mb-2">
+            <input id="dhaberes" class="form-control" type="text" readonly>
+            <div class="input-group-append">
+                <button id="bhaberes" class="btn btn-secondary">Borrar</button>
+            </div>
+        </div>  
+        <form id="descuentos" class="input-group mb-2">
+            <div class="input-group-prepend w-25">
+                <label class="input-group-text w-100">Descuentos</label>
+            </div>
+            <input type="number" autocomplete="off" name="input" class="form-control">
+            <div class="input-group-append">
+                <button class="btn btn-secondary">Agregar</button>
+            </div>
+        </form>
+        <div class="input-group mb-2">
+            <input id="ddescuentos" class="form-control" type="text" readonly>
+            <div class="input-group-append">
+                <button id="bdescuentos" class="btn btn-secondary">Borrar</button>
+            </div>
+        </div>  
+
+    </div>
+    
+    <script src="script.js?as"></script>
+</body>
+</html>
