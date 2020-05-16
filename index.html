@@ -7,7 +7,19 @@
     <title>Calculadora</title>
 </head>
 <body class="bg-dark">
+
     <div class="bg-light p-3 m-3" style="width: 500px;">
+
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Cobra por:</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option value="cd">Bersa, Banco de Santa Fe, otros</option>
+              <option value="la">Banco Nacion</option>
+            </select>
+          </div>
+
         <form id="haberes" class="input-group mb-2">
             <div class="input-group-prepend w-25">
                 <span class="input-group-text w-100">Haberes</span>
@@ -41,20 +53,6 @@
         <div class="row">
             <div class="input-group mb-2 col-6">
                 <div class="input-group-prepend">
-                    <span class="input-group-text w-100">Modelo</span>
-                </div>
-                <input class="form-control" autocomplete="off" type="number" value="3">
-            </div>
-            <div class="input-group mb-2 col-6">
-                <div class="input-group-prepend">
-                    <span class="input-group-text w-100">Monto maximo</span>
-                </div>
-                <input class="form-control" autocomplete="off" type="number" value="10000">
-            </div>
-        </div> 
-        <div class="row">
-            <div class="input-group mb-2 col-6">
-                <div class="input-group-prepend">
                     <span class="input-group-text w-100">Opciones</span>
                 </div>
                 <input class="form-control" autocomplete="off" type="number" value="3">
@@ -65,7 +63,21 @@
                 </div>
                 <input class="form-control" autocomplete="off" type="number" value="250">
             </div>
-        </div>  
+        </div>
+        <div class="row">
+            <div class="input-group mb-2 col-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100">Cuotas Maximas</span>
+                </div>
+                <input class="form-control" autocomplete="off" type="number" value="9">
+            </div>
+            <div class="input-group mb-2 col-6">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100">Monto Maximo</span>
+                </div>
+                <input class="form-control" autocomplete="off" type="number" value="10000">
+            </div>
+        </div>   
         
     </div>
     
