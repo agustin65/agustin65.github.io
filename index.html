@@ -8,13 +8,14 @@
 </head>
 <body class="bg-dark">
 
+
     <div class="bg-light p-3 m-3" style="width: 500px;">
 
         <div class="input-group mb-2">
             <div class="input-group-prepend">
-              <label class="input-group-text" for="inputGroupSelect01">Cobra por:</label>
+              <label class="input-group-text">Cobra por:</label>
             </div>
-            <select class="custom-select" id="inputGroupSelect01">
+            <select class="custom-select" id="metodo">
               <option value="cd">Bersa, Banco de Santa Fe, otros</option>
               <option value="la">Banco Nacion</option>
             </select>
@@ -50,18 +51,35 @@
                 <button id="bdescuentos" class="btn btn-secondary">Borrar</button>
             </div>
         </div>
+
+        <textarea class="form-control mb-2" id="texto" rows="4">Ingrese datos</textarea>
+
+        <div class="row">
+            <div class="input-group col-6 mb-2">
+                <button class="btn btn-secondary w-100" id="limpiar">Limpiar</button>
+            </div>
+            <div class="input-group col-6 mb-2">
+                <button class="btn btn-secondary w-100" id="copiar">Copiar</button>
+            </div>
+        </div>
+
         <div class="row">
             <div class="input-group mb-2 col-6">
                 <div class="input-group-prepend">
                     <span class="input-group-text w-100">Opciones</span>
                 </div>
-                <input class="form-control" autocomplete="off" type="number" value="3">
+                <select class="custom-select" id="op">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option selected value="3">3</option>
+                    <option value="4">4</option>
+                </select>
             </div>
             <div class="input-group mb-2 col-6">
                 <div class="input-group-prepend">
                     <span class="input-group-text w-100">Cuota Social</span>
                 </div>
-                <input class="form-control" autocomplete="off" type="number" value="250">
+                <input id="cs" class="form-control" autocomplete="off" type="number" min="150" max="500" value="250">
             </div>
         </div>
         <div class="row">
@@ -69,18 +87,25 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text w-100">Cuotas Maximas</span>
                 </div>
-                <input class="form-control" autocomplete="off" type="number" value="9">
+                <select class="custom-select" id="cm">
+                    <option value="6">6</option>
+                    <option selected value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="18">18</option>
+                </select>
             </div>
             <div class="input-group mb-2 col-6">
                 <div class="input-group-prepend">
                     <span class="input-group-text w-100">Monto Maximo</span>
                 </div>
-                <input class="form-control" autocomplete="off" type="number" value="10000">
+                <input id="mm" class="form-control" autocomplete="off" min="1000" max="10000" type="number" value="10000">
             </div>
         </div>   
         
     </div>
     
     <script src="script.js?as"></script>
+
+
 </body>
 </html>
