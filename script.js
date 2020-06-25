@@ -1,7 +1,6 @@
 //Grilla o grillas a utilizar 
 const Grilla = {
     cd: [
-        { c: 4, v: 527 },
         { c: 5, v: 440 },
         { c: 6, v: 390 },
         { c: 7, v: 350 },
@@ -13,7 +12,6 @@ const Grilla = {
         { c: 18, v: 215 },
     ],
     la: [
-        { c: 4, v: 600 },
         { c: 5, v: 500 },
         { c: 6, v: 430 },
         { c: 7, v: 395 },
