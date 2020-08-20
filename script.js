@@ -33,7 +33,10 @@ const MontoMaximo = document.querySelector("#mm");
 const CuotasMaximas = document.querySelector("#cm");
 
 //agregado escucha de los cambios de todas las opciones 
-Metodo.addEventListener('change', () => { calcular() })
+Metodo.addEventListener('change', () => {
+    CambiarCS()
+    calcular()
+})
 CuotaSocial.addEventListener('change', () => { calcular() })
 Opciones.addEventListener('change', () => { calcular() })
 MontoMaximo.addEventListener('change', () => { calcular() })
@@ -41,6 +44,14 @@ CuotasMaximas.addEventListener('change', () => { calcular() })
 
 var hab = [];
 var des = [];
+
+const CambiarCS = () => {
+    if (Metodo.value == 'la') {
+        CuotaSocial.value = 200
+    } else {
+        CuotaSocial.value = 250
+    }
+}
 
 haberes.addEventListener('submit', e => {
     e.preventDefault();
@@ -170,7 +181,7 @@ function limpiar() {
 }
 
 //se copia el texto al portapapeles
-function copiar(){
+function copiar() {
     document.querySelector("#texto").select();
     document.execCommand("copy");
 }
