@@ -54,6 +54,13 @@ const CambiarCS = () => {
     }
 }
 
+const CambiarMM = () => {
+    if (Metodo.value == 'la') {
+        MontoMaximo.value = 15000
+    } else {
+        MontoMaximo.value = 10000
+ 
+
 haberes.addEventListener('submit', e => {
     e.preventDefault();
     let input = haberes.querySelector('input').value;
