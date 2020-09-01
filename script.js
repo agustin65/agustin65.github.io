@@ -18,7 +18,8 @@ const Grilla = {
         { c: 8, v: 375 },
         { c: 9, v: 360 },
         { c: 10, v: 310 },
-        { c: 12, v: 280 }
+        { c: 12, v: 280 },
+        { c: 18, v: 220 }
     ]
 }
 
@@ -34,7 +35,7 @@ const CuotasMaximas = document.querySelector("#cm");
 
 //agregado escucha de los cambios de todas las opciones 
 Metodo.addEventListener('change', () => {
-    CambiarCS()
+    /*CambiarCS()*/
     calcular()
 })
 CuotaSocial.addEventListener('change', () => { calcular() })
