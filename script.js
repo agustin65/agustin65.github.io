@@ -40,7 +40,7 @@ Metodo.addEventListener('change', () => {
 })
 CuotaSocial.addEventListener('change', () => { calcular() })
 Opciones.addEventListener('change', () => { calcular() })
-MontoMaximo.addEventListener('change', () => { calcular() })
+MontoMaximo.addEventListener('change', () => { CambiarMM(), calcular() })
 CuotasMaximas.addEventListener('change', () => { calcular() })
 
 var hab = [];
@@ -59,7 +59,8 @@ const CambiarMM = () => {
         MontoMaximo.value = 15000
     } else {
         MontoMaximo.value = 10000
- 
+    }
+}
 
 haberes.addEventListener('submit', e => {
     e.preventDefault();
