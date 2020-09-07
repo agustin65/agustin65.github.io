@@ -160,6 +160,9 @@ function calcular() {
             }
             //agrega el texto estatico de respuesta
             texto += "Más una cuota social mensual de $" + CuotaSocial.value;
+            if(Metodo.value == 'la'){
+                texto += '\n PREAPROBADO'
+            }
         } else {
             //si la grilla seleccionada no existe, se desplegara este mensaje
             texto = 'Error en la grilla seleccionada'
