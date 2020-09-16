@@ -57,7 +57,7 @@ const CambiarCS = () => {
 
 const CambiarMM = () => {
     if (Metodo.value == 'la') {
-        MontoMaximo.value = 15000
+        MontoMaximo.value = 10000
     } else {
         MontoMaximo.value = 10000
     }
