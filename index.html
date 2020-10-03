@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Calculadora</title>
 </head>
+
 <body class="bg-dark">
 
 
@@ -13,13 +16,13 @@
 
         <div class="input-group mb-2">
             <div class="input-group-prepend">
-              <label class="input-group-text">Cobra por:</label>
+                <label class="input-group-text">Cobra por:</label>
             </div>
             <select class="custom-select" id="metodo">
-              <option value="cd">Bersa y Otros</option>
-              <option value="la">Banco Nacion</option>
+                <option value="cd">Bersa y Otros</option>
+                <option value="la">Banco Nacion</option>
             </select>
-          </div>
+        </div>
 
         <form id="haberes" class="input-group mb-2">
             <div class="input-group-prepend w-25">
@@ -35,7 +38,7 @@
             <div class="input-group-append">
                 <button id="bhaberes" class="btn btn-secondary">Borrar</button>
             </div>
-        </div>  
+        </div>
         <form id="descuentos" class="input-group mb-2">
             <div class="input-group-prepend w-25">
                 <label class="input-group-text w-100">Descuentos</label>
@@ -98,14 +101,48 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text w-100">Monto Maximo</span>
                 </div>
-                <input id="mm" class="form-control" autocomplete="off" min="1000" max="20000" type="number" value="10000">
+                <input id="mm" class="form-control" autocomplete="off" min="1000" max="20000" type="number"
+                    value="10000">
             </div>
-        </div>   
-        
+        </div>
+        <hr>
+        <div class="row">
+            <div class="input-group mb-2 col-5">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100">Mes</span>
+                </div>
+                <select class="custom-select" id="mes">
+                    <option selected value="0">Actual</option>
+                    <option value="1">Enero</option>
+                    <option value="2">Febrero</option>
+                    <option value="3">Marzo</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Mayo</option>
+                    <option value="6">Junio</option>
+                    <option value="7">Julio</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Septiembre</option>
+                    <option value="10">Octubre</option>
+                    <option value="11">Noviembre</option>
+                    <option value="12">Diciembre</option>
+                </select>
+            </div>
+            <div class="input-group mb-2 col-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text w-100">Día</span>
+                </div>
+                <input id="dia" class="form-control" autocomplete="off" min="1" max="32" type="number">
+            </div>
+            <div class="input-group mb-2 col-3">
+                <input id="diaCobro" class="form-control" disabled>
+            </div>
+        </div>
     </div>
-    
+
     <script src="script.js?as"></script>
+    <script src="diaCobro.js?as"></script>
 
 
 </body>
+
 </html>
