@@ -36,7 +36,7 @@ const CuotasMaximas = document.querySelector("#cm");
 //agregado escucha de los cambios de todas las opciones 
 Metodo.addEventListener('change', () => {
     /*CambiarCS()*/
-    CambiarMM()
+    //CambiarMM()
     calcular()
 })
 CuotaSocial.addEventListener('change', () => { calcular() })
