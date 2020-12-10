@@ -1,23 +1,23 @@
 //Grilla o grillas a utilizar 
 const Grilla = {
     cd: [
-        { c: 5, v: 440 },
-        { c: 6, v: 390 },
+        //{ c: 5, v: 440 },
+        //{ c: 6, v: 390 },
         { c: 7, v: 350 },
-        { c: 8, v: 320 },
+        //{ c: 8, v: 320 },
         { c: 9, v: 300 },
-        { c: 10, v: 290 },
+        //{ c: 10, v: 290 },
         { c: 12, v: 265 },
-        { c: 15, v: 240 },
+        //{ c: 15, v: 240 },
         { c: 18, v: 215 },
     ],
     la: [
-        { c: 5, v: 500 },
-        { c: 6, v: 430 },
+        //{ c: 5, v: 500 },
+        //{ c: 6, v: 430 },
         { c: 7, v: 395 },
-        { c: 8, v: 375 },
+        //{ c: 8, v: 375 },
         { c: 9, v: 360 },
-        { c: 10, v: 310 },
+        //{ c: 10, v: 310 },
         { c: 12, v: 280 },
         { c: 18, v: 220 }
     ]
@@ -161,7 +161,7 @@ function calcular() {
             //agrega el texto estatico de respuesta
             texto += "Más una cuota social mensual de $" + CuotaSocial.value;
             //if(Metodo.value == 'la'){
-                texto += '\n Preaprobado'
+            texto += '\n Preaprobado'
             //}
         } else {
             //si la grilla seleccionada no existe, se desplegara este mensaje
