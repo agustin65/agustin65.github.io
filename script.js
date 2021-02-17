@@ -198,3 +198,24 @@ function copiar() {
     document.querySelector("#texto").select();
     document.execCommand("copy");
 }
+
+
+//para cuiles
+
+const cuilesElement = document.getElementById('paraCuiles')
+cuilesElement.addEventListener('change', () => { FiltrarCuil() })
+
+
+function FiltrarCuil() {
+    let str = cuilesElement.value.split('')
+    let cuil = ''
+    for (let i in str) {
+        if (str[i] != ' ' && str[i] + 2 * 100 > 100 && cuil.length < 11) {
+            cuil += str[i].toString()
+        }
+    }
+    cuilesElement.value = cuil
+    cuilesElement.select()
+    document.execCommand("copy")
+}
+
