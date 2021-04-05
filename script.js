@@ -29,7 +29,7 @@ const descuentos = document.querySelector("#descuentos");
 
 const Metodo = document.querySelector("#metodo");
 const CuotaSocial = document.querySelector("#cs");
-const Opciones = document.querySelector("#op");
+const Cupo = document.querySelector("#cupo");
 const MontoMaximo = document.querySelector("#mm");
 const CuotasMaximas = document.querySelector("#cm");
 
@@ -40,7 +40,7 @@ Metodo.addEventListener('change', () => {
     calcular()
 })
 CuotaSocial.addEventListener('change', () => { calcular() })
-Opciones.addEventListener('change', () => { calcular() })
+Cupo.addEventListener('change', () => { calcular() })
 MontoMaximo.addEventListener('change', () => { calcular() })
 CuotasMaximas.addEventListener('change', () => { calcular() })
 
@@ -114,7 +114,8 @@ function calcular() {
     let descuentos = 0;
     des.map(d => (descuentos += d * 1));
     //determinacion de cuanto hay disponible
-    const diferencia = Math.trunc((haberes - descuentos) / 3) - CuotaSocial.value;
+    console.log((haberes - descuentos) * Cupo.value / 100)
+    const diferencia = Math.trunc((haberes - descuentos) * Cupo.value / 100) - CuotaSocial.value;
     let texto = '';
     if (diferencia > 0) {
         //seleccion de grilla a usar
@@ -151,7 +152,7 @@ function calcular() {
             //ordena las opciones en base a su index (que monto encaja mejor)
             opciones.sort((a, b) => (a.i - b.i))
             //elimina todas las opciones sobrantes 
-            while (opciones.length > Opciones.value) {
+            while (opciones.length > 3) {
                 opciones.pop()
             }
             //crea las lineas de texto que contienen informacion guardada en 'opciones'
