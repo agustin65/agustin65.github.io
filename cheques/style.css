@@ -1,0 +1,45 @@
+.main {
+  margin: 15px;
+  width: 500px;
+  background-color: #5a5959;
+  border: 2px solid #e1e1e1;
+  border-radius: 10px;
+}
+.main h3 {
+  padding-bottom: 10px;
+  color: #e1e1e1;
+  width: 100%;
+  border-bottom: 2px solid #e1e1e1;
+}
+.main hr {
+  background-color: #e1e1e1;
+  height: 1px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.main .inputs {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.main .inputs label {
+  font-size: 20px;
+  color: #e1e1e1;
+  flex-basis: 60%;
+  padding: 2px;
+}
+.main .inputs select {
+  color: #e1e1e1;
+  background-color: #747272;
+  flex-basis: 40%;
+}
+.main .inputs input {
+  text-align: right;
+  color: #e1e1e1;
+  background-color: #747272;
+  flex-basis: 40%;
+}
+.main .inputs input[type=date] {
+  text-align: left;
+}
+
+/*# sourceMappingURL=style.css.map */

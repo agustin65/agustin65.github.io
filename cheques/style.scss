@@ -1,0 +1,53 @@
+$textColor : rgb(225, 225, 225);
+$backgroundColor : rgb(90, 89, 89);
+
+.main {
+    margin: 15px;
+    width: 500px;
+    background-color: $backgroundColor;
+    border: 2px solid $textColor;
+    border-radius: 10px;
+
+    h3 {
+        padding-bottom: 10px;
+        color: $textColor;
+        width: 100%;
+        border-bottom: 2px solid $textColor;
+    }
+
+    hr {
+        background-color: $textColor;
+        height: 1px;
+        margin-top: 4px;
+        margin-bottom: 8px;
+    }
+
+    .inputs {
+        display: flex;
+        flex-flow: row nowrap;
+
+        label {
+            font-size: 20px;
+            color: $textColor;
+            flex-basis: 60%;
+            padding: 2px;
+        }
+
+        select {
+            color: $textColor;
+            background-color: lighten($backgroundColor, $amount: 10);
+            flex-basis: 40%;
+        }
+
+        input {
+            text-align: right;
+            color: $textColor;
+            background-color: lighten($backgroundColor, $amount: 10);
+            flex-basis: 40%;
+        }
+
+        input[type=date]{
+            text-align: left;
+        }
+    }
+}
