@@ -34,6 +34,7 @@ const fechaFin = document.getElementById('fechaFin')
 
 //outputs
 const montoFinal = document.getElementById('montoFinal')
+const montoARecibir = document.getElementById('montoARecibir')
 const inputDias = document.getElementById('dias')
 const gastosBancarios = document.getElementById('gastos')
 const comMutual = document.getElementById('comisionMutual')
@@ -104,12 +105,13 @@ function Calcular() {
             let m = QuitarFormato(monto.value)
             montoFinal.value = Decimales(m - (m * tasaApertura) - (m * tasaInmediata))
             inputDias.value = 1
-            gastosBancarios.value = Decimales(m * (0.012 + 0.014))
+            gastosBancarios.value = Decimales(m * 0.012)
             comMutual.value = Decimales(m * 0.01)
             inputTasaApertura.value = Decimales(m * tasaApertura)
             montoInteres.value = Decimales(m * tasaInmediata)
             restos.value = Decimales(QuitarFormato(inputTasaApertura.value) - QuitarFormato(gastosBancarios.value))
             comAmcap.value = Decimales(QuitarFormato(montoInteres.value) - QuitarFormato(comMutual.value))
+            montoARecibir.value = Decimales(QuitarFormato(montoFinal.value) + QuitarFormato(gastosBancarios.value) + QuitarFormato(comMutual.value))
         }
     } else {
         if (monto.value !== '' && fechaInicio.value !== '' && fechaFin.value !== '') {
@@ -117,12 +119,13 @@ function Calcular() {
             let m = QuitarFormato(monto.value)
             montoFinal.value = Decimales(m - (m * tasaApertura) - (m * tasaDiferida * dias))
             inputDias.value = dias
-            gastosBancarios.value = Decimales(m * (0.012 + 0.014))
+            gastosBancarios.value = Decimales(m * 0.012)
             comMutual.value = Decimales(m * (0.01 / 30) * dias)
             inputTasaApertura.value = Decimales(m * tasaApertura)
             montoInteres.value = Decimales(m * tasaDiferida * dias)
             restos.value = Decimales(QuitarFormato(inputTasaApertura.value) - QuitarFormato(gastosBancarios.value))
             comAmcap.value = Decimales(QuitarFormato(montoInteres.value) - QuitarFormato(comMutual.value))
+            montoARecibir.value = Decimales(QuitarFormato(montoFinal.value) + QuitarFormato(gastosBancarios.value) + QuitarFormato(comMutual.value))
         }
     }
 }
