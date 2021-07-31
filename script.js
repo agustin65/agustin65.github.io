@@ -1,25 +1,15 @@
 //Grilla o grillas a utilizar 
 const Grilla = {
     cd: [
-        //{ c: 5, v: 440 },
-        //{ c: 6, v: 390 },
-        { c: 7, v: 400 },
-        //{ c: 8, v: 320 },
-        { c: 9, v: 350 },
-        //{ c: 10, v: 290 },
+        { c: 5, v: 410 },
+        { c: 6, v: 377 },
+        { c: 7, v: 353 },
+        { c: 8, v: 335 },
+        { c: 9, v: 322 },
+        { c: 10, v: 310 },
+        { c: 11, v: 301 },
         { c: 12, v: 293 },
-        //{ c: 15, v: 240 },
-        //{ c: 18, v: 215 },
-    ],
-    la: [
-        //{ c: 5, v: 500 },
-        //{ c: 6, v: 430 },
-        { c: 7, v: 395 },
-        //{ c: 8, v: 375 },
-        { c: 9, v: 360 },
-        //{ c: 10, v: 310 },
-        { c: 12, v: 280 },
-        //{ c: 18, v: 220 }
+        { c: 15, v: 277 },
     ]
 }
 
@@ -27,18 +17,18 @@ const Grilla = {
 const haberes = document.querySelector("#haberes");
 const descuentos = document.querySelector("#descuentos");
 
-const Metodo = document.querySelector("#metodo");
+//const Metodo = document.querySelector("#metodo");
 const CuotaSocial = document.querySelector("#cs");
 const Cupo = document.querySelector("#cupo");
 const MontoMaximo = document.querySelector("#mm");
 const CuotasMaximas = document.querySelector("#cm");
 
 //agregado escucha de los cambios de todas las opciones 
-Metodo.addEventListener('change', () => {
-    /*CambiarCS()*/
+/*Metodo.addEventListener('change', () => {
+    /*CambiarCS()
     //CambiarMM()
     calcular()
-})
+})*/
 CuotaSocial.addEventListener('change', () => { calcular() })
 Cupo.addEventListener('change', () => { calcular() })
 MontoMaximo.addEventListener('change', () => { calcular() })
@@ -47,7 +37,7 @@ CuotasMaximas.addEventListener('change', () => { calcular() })
 var hab = [];
 var des = [];
 
-const CambiarCS = () => {
+/*const CambiarCS = () => {
     if (Metodo.value == 'la') {
         CuotaSocial.value = 200
     } else {
@@ -61,7 +51,7 @@ const CambiarMM = () => {
     } else {
         MontoMaximo.value = 10000
     }
-}
+}*/
 
 haberes.addEventListener('submit', e => {
     e.preventDefault();
