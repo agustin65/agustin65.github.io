@@ -109,12 +109,12 @@ function calcular() {
     let texto = '';
     if (diferencia > 0) {
         //seleccion de grilla a usar
-        let grilla = [];
-        if (Metodo.value == "cd") {
+        let grilla = Grilla.cd;
+        /*if (Metodo.value == "cd") {
             grilla = Grilla.cd
         } else if (Metodo.value == "la") {
             grilla = Grilla.la
-        }
+        }*/
         if (grilla.length > 0) {
             let opciones = [];
             //orden de opciones y montos disponibles
