@@ -16,11 +16,10 @@
 
         <div class="input-group mb-2">
             <div class="input-group-prepend">
-                <label class="input-group-text">Cobra por:</label>
+                <label class="input-group-text">Grilla:</label>
             </div>
-            <select class="custom-select" id="metodo">
-                <option value="cd">Bersa y Otros</option>
-                <option value="la">Banco Nacion</option>
+            <select class="custom-select" id="grilla">
+                <option value="normal">Principal</option>
             </select>
         </div>
 
@@ -71,8 +70,14 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text w-100">Cupo a Considerar</span>
                 </div>
-                <input id="cupo" class="form-control" autocomplete="off" type="number" min="0" max="100" value="65">
+                <input id="cupo" list='cuposAConsiderar' class="form-control" autocomplete="off" type="number" min="0"
+                    max="100" value="50">
             </div>
+            <datalist id='cuposAConsiderar'>
+                <option value='25'>25</option>
+                <option value='33'>33</option>
+                <option value='50'>50</option>
+            </datalist>
             <div class="input-group mb-2 col-6">
                 <div class="input-group-prepend">
                     <span class="input-group-text w-100">Cuota Social</span>
